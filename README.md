@@ -1,15 +1,5 @@
+# Elimu Frontend
 
-### Development mode
-```
-npm install
-npx shadow-cljs watch app
-```
-start a ClojureScript REPL
-```
-npx shadow-cljs browser-repl
-```
-### Building for production
+Elimu Frontend is the public-facing web application for **Elimu**, a startup focused on social and technological projects. This platform showcases the work done by Elimu, its partners, and the initiatives it has contributed to.
 
-```
-npx shadow-cljs release app
-```
+
