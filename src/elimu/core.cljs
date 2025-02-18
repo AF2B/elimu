@@ -1,20 +1,14 @@
 (ns elimu.core
-    (:require
-     [reagent.core :as r]
-     [reagent.dom :as d]
-     [elimu.pages.home :as home]))
+  (:require [reagent.core :as r]
+            [reagent.dom :as d]
+            [elimu.components.header.header :refer [header]]))
 
-;; -------------------------
-;; Views
-
-(defn home-page []
-  [home/home-page])
-
-;; -------------------------
-;; Initialize app
+(defn app []
+  [:div
+   [header]])
 
 (defn mount-root []
-  (d/render [home-page] (.getElementById js/document "app")))
+  (d/render [app] (.getElementById js/document "app")))
 
 (defn ^:export init! []
   (mount-root))
