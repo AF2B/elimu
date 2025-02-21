@@ -9,20 +9,16 @@
         ;; Logo
         [:a.logo {:href "/"}
          [:h1.sitename "LOGO"]]
-        
+
         ;; Navigation Menu
         [:nav.navmenu {:class (when @mobile-menu-open? "active")}
          [:ul.nav-list
           [:li [:a.active {:href "/"} "Home"]]
           [:li [:a {:href "/parceiros"} "Parceiros"]]
-          [:li [:a {:href "/socios"} "Sócios"]]
           [:li [:a {:href "/sobre"} "Sobre Nós"]]
           [:li [:a {:href "/contato"} "Contato"]]]
-         
-         ;; Newsletter Button
-         [:a.btn-newsletter {:href "/newsletter"} "Assinar Newsletter"]]
-        
+
         ;; Mobile Menu Toggle
         [:div.mobile-nav-toggle
          {:on-click #(swap! mobile-menu-open? not)}
-         (if @mobile-menu-open? "✕" "☰")]]])))
+         (if @mobile-menu-open? "✕" "☰")]]]])))
